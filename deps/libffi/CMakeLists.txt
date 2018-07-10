@@ -29,6 +29,9 @@ else()
     src/x86/sysv.S)
 endif()
 
+add_custom_command(OUTPUT include/ffi.h include/ffitarget.h fficofig.h
+  COMMAND ./configure)
+
 add_library(ffi STATIC ${LIBFFI_SOURCE_FILES})
 
 install(TARGETS ffi DESTINATION ${CMAKE_BINARY_DIR})

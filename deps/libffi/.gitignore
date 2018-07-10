@@ -15,3 +15,8 @@ libtool
 stamp-h1
 libffi*gz
 autom4te.cache
+
+# Generated files
+include/ffi.h
+include/ffitarget.h
+fficonfig.h
