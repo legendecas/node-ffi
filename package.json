@@ -35,6 +35,8 @@
     "ref-array": "1"
   },
   "scripts": {
+    "configure": "mkdir -p build; cd build; cmake ..; cd -",
+    "build": "cd build; make; cd -",
     "test": "node-gyp rebuild --directory test && mocha -gc --reporter spec"
   },
   "repository": {
