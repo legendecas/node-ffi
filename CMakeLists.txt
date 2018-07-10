@@ -2,9 +2,7 @@ cmake_minimum_required(VERSION 2.8.12)
 project(shadow_ffi C)
 
 set(LIBFFI_SOURCE_FILES
-  src/ffi.c
-  src/callback_info.c
-  src/threaded_callback_invokation.c)
+  src/ffi.c)
 
 add_library(shadow_ffi MODULE ${LIBFFI_SOURCE_FILES})
 set(CMAKE_C_FLAGS "-Os")
@@ -17,10 +15,10 @@ set_target_properties(shadow_ffi PROPERTIES
 )
 
 if(CMAKE_SYSTEM_NAME MATCHES Darwin)
-  set_target_properties(demo_dy PROPERTIES
+  set_target_properties(shadow_ffi PROPERTIES
     LINK_FLAGS "-undefined dynamic_lookup")
 else()
-  set_target_properties(demo_dy PROPERTIES
+  set_target_properties(shadow_ffi PROPERTIES
     LINK_FLAGS "-rdynamic")
 endif()
 

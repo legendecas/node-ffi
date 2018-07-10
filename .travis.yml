@@ -31,4 +31,8 @@ script:
   - node --version
   - npm --version
   # Run tests
-  - npm test
+  - npm run configure
+  # TODO: fetch shadow-node headers to build
+  # - npm run build
+  # TODO: add tests
+  # - npm test
