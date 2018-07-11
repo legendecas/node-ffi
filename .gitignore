@@ -17,3 +17,5 @@ Makefile.gyp
 gyp-*-tool
 .dirstamp
 npm-debug.log
+
+*-tmp
